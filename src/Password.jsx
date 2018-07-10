@@ -20,7 +20,8 @@ class Password extends Component {
     
     if (passToTest.length <= 6) {
       this.setState({
-        security : 'weak'
+        security : 'weak',
+        disableSubmit : true
       });
     }
     if (passToTest.length > 6 && /[a-zA-Z]/g.test(passToTest)) {
